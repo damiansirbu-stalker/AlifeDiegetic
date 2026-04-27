@@ -1,4 +1,5 @@
 Diegetic Audio Control: In-world volume control for STALKER Anomaly, by Damian
+Version: 1.0.8 (xlibs 1.4.1)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Changelog: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
 Russian / На русском: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme_ru.txt
@@ -65,7 +66,6 @@ The code is validated in real time by a multi-stage pipeline: luacheck, selene, 
 Full report in doc/test-report.log.
 
 Credits:
-Stalker_Boss - Russian translation
 Altogolik - support, ideas, source materials
 
 Usage and License:

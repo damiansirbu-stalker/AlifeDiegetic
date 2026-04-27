@@ -1,6 +1,8 @@
 Diegetic Audio Control: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
+Версия: 1.0.8 (xlibs 1.4.1)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Список изменений: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
+English: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme.txt
 Сообщить об ошибке: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues
 
 В Anomaly нет способа регулировать громкость радио, мегафонов, гитар и губных гармошек независимо от общих ползунков звука. Нельзя приглушить пропаганду Долга, не убив при этом эмбиент. Diegetic Audio Control решает эту проблему.
@@ -35,7 +37,6 @@ GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 
 Требования:
 Anomaly 1.5.3
-Моддед-экзешники
 xlibs (https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001)
 MCM
 Radio_Remastered или аналог (для управления радио/мегафонами)
@@ -55,7 +56,7 @@ Harmonica от Daiviey (опционально, для управления га
 Все настройки в MCM в разделе Diegetic Audio Control. Все значения по умолчанию 1.0 (без изменений от игрового поведения).
 
 Совместимость:
-Совместим со всеми вариантами моддед-экзешников (Demonized, AOE, MT).
+Протестирован на ванильном Anomaly 1.5.3, Demonized main, Demonized MT и AOEngine (актуальные версии).
 Протестирован с GAMMA. Подключается к ph_sound, guitar_anim и harmonica_anim. Если эти моды отсутствуют, соответствующие элементы управления неактивны. Без модификации базовых скриптов.
 
 Разработка:
@@ -65,7 +66,6 @@ Harmonica от Daiviey (опционально, для управления га
 Полный отчёт в doc/test-report.log.
 
 Авторы:
-Stalker_Boss -- русский перевод
 Altogolik -- поддержка, идеи, исходные материалы
 
 Использование и лицензия:
