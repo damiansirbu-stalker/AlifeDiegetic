@@ -1,6 +1,7 @@
 Diegetic Audio Control: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Список изменений: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
+Сообщить об ошибке: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues
 
 В Anomaly нет способа регулировать громкость радио, мегафонов, гитар и губных гармошек независимо от общих ползунков звука. Нельзя приглушить пропаганду Долга, не убив при этом эмбиент. Diegetic Audio Control решает эту проблему.
 
