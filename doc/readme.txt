@@ -3,7 +3,7 @@ Version: 1.0.8 (xlibs 1.4.1)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Changelog: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
 Russian / На русском: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme_ru.txt
-Report a bug: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues
+Bugs, suggestions: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues
 
 Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
 
