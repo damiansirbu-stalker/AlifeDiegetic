@@ -1,5 +1,5 @@
 Diegetic Audio Control: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
-Версия: 1.0.8 (xlibs 1.5.1)
+Версия: 1.0.8 (xlibs 1.5.1, demonized 20250908, AOEngine v0.55)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Список изменений: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
 English: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme.txt
