@@ -1,5 +1,5 @@
 Diegetic Audio Control: In-world volume control for STALKER Anomaly, by Damian
-Version: 1.0.8 (xlibs 1.5.1, demonized 20250908, AOEngine v0.55)
+Version: 1.0.8 (xlibs 1.5.1)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Changelog: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
 Russian / На русском: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme_ru.txt
@@ -56,7 +56,9 @@ Configuration:
 All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchanged from game behavior).
 
 Compatibility:
-Tested with vanilla Anomaly 1.5.3, Demonized main, Demonized MT, and AOEngine (latest versions).
+Requires xlibs.
+Runs on themrdemonized modded exes 2025.9.10 or newer, or AOEngine v0.55 or newer.
+The full feature set needs the latest demonized build. A feature that needs a newer build stays inactive on older exes.
 Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.
 
 Development:
@@ -73,3 +75,14 @@ Usage and License:
   Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.
   Reproducing the implementation in other software: not allowed, even with credit.
   Full license in LICENSE file and on GitHub.
+
+Reporting issues and suggestions
+Open a bug report or a suggestion at https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues/new/choose.
+Also discussed on the GAMMA, EFP, Anomaly, and Zona Discord servers.
+
+Before posting, read this readme and the MCM options.
+
+Include:
+- Exact steps to reproduce, from a new game or a named save, with expected and actual result.
+- xray.log and the mod debug log (MCM log level DEBUG), plus engine build, modlist, load order.
+- Describe the behavior. With hundreds of mods and overrides, only the log shows whether this mod was involved and what caused it.

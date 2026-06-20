@@ -1,5 +1,5 @@
 Diegetic Audio Control: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
-Версия: 1.0.8 (xlibs 1.5.1, demonized 20250908, AOEngine v0.55)
+Версия: 1.0.8 (xlibs 1.5.1)
 GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
 Список изменений: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
 English: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme.txt
@@ -56,7 +56,9 @@ Harmonica от Daiviey (опционально, для управления га
 Все настройки в MCM в разделе Diegetic Audio Control. Все значения по умолчанию 1.0 (без изменений от игрового поведения).
 
 Совместимость:
-Протестирован на ванильном Anomaly 1.5.3, Demonized main, Demonized MT и AOEngine (актуальные версии).
+Требует xlibs.
+Работает на моддированных exe themrdemonized 2025.9.10 или новее, либо AOEngine v0.55 или новее.
+Полный набор функций требует последней сборки demonized. Функция, которой нужна более новая сборка, остаётся неактивной на старых exe.
 Протестирован с GAMMA. Подключается к ph_sound, guitar_anim и harmonica_anim. Если эти моды отсутствуют, соответствующие элементы управления неактивны. Без модификации базовых скриптов.
 
 Разработка:
@@ -73,3 +75,14 @@ Altogolik -- поддержка, идеи, исходные материалы
   Аддоны, патчи, интеграции: разрешены. Укажите "Diegetic Audio Control by Damian Sirbu" заметно на странице вашего мода.
   Воспроизведение реализации в другом программном обеспечении: запрещено, даже с указанием авторства.
   Полная лицензия в файле LICENSE и на GitHub.
+
+Сообщения о проблемах и предложения
+Создайте баг-репорт или предложение на https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues/new/choose.
+Также обсуждается на Discord-серверах GAMMA, EFP, Anomaly и Zona.
+
+Перед публикацией прочитайте этот readme и опции MCM.
+
+Приложите:
+- Точные шаги воспроизведения, с новой игры или с названного сохранения, ожидаемый и фактический результат.
+- xray.log и отладочный лог мода (уровень логов DEBUG в MCM), сборку движка, список модов и порядок загрузки.
+- Опишите поведение. Среди сотен модов и переопределений только лог показывает, причастен ли этот мод и в чём причина.
