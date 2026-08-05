@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a bug in Diegetic Audio Control
+about: Report a bug in AlifeDiegetic
 title: ''
 labels: bug
 ---
@@ -16,7 +16,7 @@ labels: bug
 2.
 
 ## Versions
-- Diegetic Audio Control:
+- AlifeDiegetic:
 - xlibs:
 - Anomaly: 1.5.3 (Modded exes y/n)
 - GAMMA / standalone:
@@ -27,7 +27,7 @@ Attach `D:\Anomaly\appdata\logs\diegetic.log` and `xray_<user>.log`.
 Without these the report will likely be closed unactioned.
 
 **Enable debug logging first, then reproduce:**
-1. Main menu -> Mod Configuration Menu -> Diegetic Audio Control -> tick `debug_mode`
+1. Main menu -> Mod Configuration Menu -> AlifeDiegetic -> tick `debug_mode`
 2. Save, load your save
 3. Reproduce the bug
 4. Attach `diegetic.log`

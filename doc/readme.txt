@@ -1,11 +1,19 @@
-Diegetic Audio Control: In-world volume control for STALKER Anomaly, by Damian
+AlifeDiegetic: In-world volume control for STALKER Anomaly, by Damian
 Version: next (xlibs 1.5.1)
-GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
-Changelog: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
-Russian / На русском: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme_ru.txt
-Bugs, suggestions: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues
+GitHub: https://github.com/damiansirbu-stalker/AlifeDiegetic
+Changelog: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/changelog
+Russian / На русском: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/readme_ru.txt
+Bugs, suggestions: https://github.com/damiansirbu-stalker/AlifeDiegetic/issues
 
-Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. Diegetic Audio Control fixes this.
+Alife Collection:
+AlifePlus: https://www.moddb.com/mods/stalker-anomaly/addons/alifeplus-v1-0-01
+AlifeBalance: https://www.moddb.com/mods/stalker-anomaly/addons/alifebalance
+AlifeGuard: https://www.moddb.com/mods/stalker-anomaly/addons/alifeguard-1001
+AlifeTactics: https://www.moddb.com/mods/stalker-anomaly/addons/alifetactics
+AlifeDiegetic: https://www.moddb.com/mods/stalker-anomaly/addons/diegetic-audio-control-100
+AlifeSpooks: https://github.com/damiansirbu-stalker/AlifeSpooks
+
+Anomaly has no way to control the volume of radios, megaphones, guitars, and harmonicas independently from the game's audio sliders. You can't turn down Duty propaganda without killing ambient sounds. AlifeDiegetic fixes this.
 
 The mod hooks directly into the audio subsystems that play in-world sound: ph_sound for radios and megaphones, guitar_anim for campfire guitar, harmonica_anim for harmonica. Each source gets its own volume slider, enable/disable toggle, and where applicable a pause multiplier that controls silence between tracks or announcements.
 
@@ -45,7 +53,7 @@ Harmonica by Daiviey (optional, for harmonica control)
 
 Install (MO2):
 1. Install xlibs
-2. Install Diegetic Audio Control
+2. Install AlifeDiegetic
 3. Load order does not matter
 4. Configure via MCM
 
@@ -53,7 +61,7 @@ Uninstall (MO2):
 Disable or remove in MO2.
 
 Configuration:
-All settings in MCM under Diegetic Audio Control. All defaults are 1.0 (unchanged from game behavior).
+All settings in MCM under AlifeDiegetic. All defaults are 1.0 (unchanged from game behavior).
 
 Compatibility:
 Requires xlibs.
@@ -69,19 +77,19 @@ Full report in doc/test-report.log.
 
 FAQ:
 Do I need modded exes?
-  Yes. Diegetic Audio Control needs themrdemonized modded exes (2025.9.10 or newer) or AOEngine (v0.55 or newer). Vanilla Anomaly does not expose the APIs it relies on.
+  Yes. AlifeDiegetic needs themrdemonized modded exes (2025.9.10 or newer) or AOEngine (v0.55 or newer). Vanilla Anomaly does not expose the APIs it relies on.
 
 Credits:
 Altogolik - support, ideas, source materials
 
 Usage and License:
   Modpacks: allowed and encouraged. Keep the readme and license files.
-  Addons, patches, integrations: allowed. Credit "Diegetic Audio Control by Damian Sirbu" visibly on your mod page.
+  Addons, patches, integrations: allowed. Credit "AlifeDiegetic by Damian Sirbu" visibly on your mod page.
   Reproducing the implementation in other software: not allowed, even with credit.
   Full license in LICENSE file and on GitHub.
 
 Reporting issues and suggestions
-Open a report at https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues/new/choose, or ask on the GAMMA, EFP, Anomaly, and Zona Discord servers. Read this readme and the MCM options first.
+Open a report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose, or ask on the GAMMA, EFP, Anomaly, and Zona Discord servers. Read this readme and the MCM options first.
 
 Include: exact repro steps (new game or named save, expected vs actual), engine build, modlist, load order, xray.log, and the mod debug log. With hundreds of mods loaded, only the log shows whether this one was involved.
 

@@ -1,11 +1,11 @@
-Diegetic Audio Control: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
+AlifeDiegetic: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
 Версия: next (xlibs 1.5.1)
-GitHub: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control
-Список изменений: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/changelog
-English: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/blob/main/doc/readme.txt
-Баги, предложения: https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues
+GitHub: https://github.com/damiansirbu-stalker/AlifeDiegetic
+Список изменений: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/changelog
+English: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/readme.txt
+Баги, предложения: https://github.com/damiansirbu-stalker/AlifeDiegetic/issues
 
-В Anomaly нет способа регулировать громкость радио, мегафонов, гитар и губных гармошек независимо от общих ползунков звука. Нельзя приглушить пропаганду Долга, не убив при этом эмбиент. Diegetic Audio Control решает эту проблему.
+В Anomaly нет способа регулировать громкость радио, мегафонов, гитар и губных гармошек независимо от общих ползунков звука. Нельзя приглушить пропаганду Долга, не убив при этом эмбиент. AlifeDiegetic решает эту проблему.
 
 Мод подключается напрямую к аудиоподсистемам, воспроизводящим внутриигровой звук: ph_sound для радио и мегафонов, guitar_anim для гитары у костра, harmonica_anim для губной гармошки. Каждый источник получает свой ползунок громкости, переключатель включения/выключения и, где применимо, множитель паузы, управляющий тишиной между треками или объявлениями.
 
@@ -45,7 +45,7 @@ Harmonica от Daiviey (опционально, для управления га
 
 Установка (MO2):
 1. Установите xlibs
-2. Установите Diegetic Audio Control
+2. Установите AlifeDiegetic
 3. Порядок загрузки не имеет значения
 4. Настройте через MCM
 
@@ -53,7 +53,7 @@ Harmonica от Daiviey (опционально, для управления га
 Отключите или удалите в MO2.
 
 Конфигурация:
-Все настройки в MCM в разделе Diegetic Audio Control. Все значения по умолчанию 1.0 (без изменений от игрового поведения).
+Все настройки в MCM в разделе AlifeDiegetic. Все значения по умолчанию 1.0 (без изменений от игрового поведения).
 
 Совместимость:
 Требует xlibs.
@@ -70,19 +70,19 @@ Harmonica от Daiviey (опционально, для управления га
 Часто задаваемые вопросы:
 
 Нужны ли моддированные exe?
-  Да. Diegetic Audio Control требует моддированные exe от themrdemonized (2025.9.10 или новее) или AOEngine (v0.55 или новее). Ванильный Anomaly не предоставляет API, на которые он опирается.
+  Да. AlifeDiegetic требует моддированные exe от themrdemonized (2025.9.10 или новее) или AOEngine (v0.55 или новее). Ванильный Anomaly не предоставляет API, на которые он опирается.
 
 Авторы:
 Altogolik -- поддержка, идеи, исходные материалы
 
 Использование и лицензия:
   Модпаки: разрешены и приветствуются. Сохраняйте файлы readme и лицензии.
-  Аддоны, патчи, интеграции: разрешены. Укажите "Diegetic Audio Control by Damian Sirbu" заметно на странице вашего мода.
+  Аддоны, патчи, интеграции: разрешены. Укажите "AlifeDiegetic by Damian Sirbu" заметно на странице вашего мода.
   Воспроизведение реализации в другом программном обеспечении: запрещено, даже с указанием авторства.
   Полная лицензия в файле LICENSE и на GitHub.
 
 Сообщения о проблемах и предложения
-Создайте отчёт на https://github.com/damiansirbu-stalker/Diegetic-Audio-Control/issues/new/choose или спросите на Discord-серверах GAMMA, EFP, Anomaly и Zona. Сначала прочитайте этот readme и настройки MCM.
+Создайте отчёт на https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose или спросите на Discord-серверах GAMMA, EFP, Anomaly и Zona. Сначала прочитайте этот readme и настройки MCM.
 
 Приложите: точные шаги воспроизведения (новая игра или именованное сохранение, ожидаемое и фактическое), сборку движка, список модов, порядок загрузки, xray.log и лог отладки мода. С сотнями загруженных модов только лог показывает, был ли задействован именно этот.
 

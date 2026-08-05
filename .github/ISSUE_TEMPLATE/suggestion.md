@@ -1,6 +1,6 @@
 ---
 name: Suggestion
-about: Propose an idea or feature for Diegetic Audio Control
+about: Propose an idea or feature for AlifeDiegetic
 title: ''
 labels: suggestion
 ---

@@ -1,4 +1,6 @@
 next
+  Renamed: now AlifeDiegetic, part of the Alife mod family.
+  Fixed: radio and megaphone volume holds steady at the set level, and returning a frequency slider to default restores the original timing.
   Compatibility:
     Requires themrdemonized modded exes 2025.9.10+ or AOEngine v0.55+.
 

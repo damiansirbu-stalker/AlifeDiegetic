@@ -1,4 +1,4 @@
---- diegetic_audio_control_mcm: MCM configuration for Diegetic Audio Control
+--- ad_mcm: MCM configuration for AlifeDiegetic
 
 local RegisterScriptCallback = RegisterScriptCallback
 
@@ -17,27 +17,27 @@ defaults = {
     debug_mode = false,
 }
 
-local path_builder = function(key) return "diegetic_audio_control/" .. key end
-cfg, get_config, load_config = xmcm.create_config("diegetic_audio_control", defaults, path_builder)
+local path_builder = function(key) return "ad/" .. key end
+cfg, get_config, load_config = xmcm.create_config("ad", defaults, path_builder)
 
 function on_mcm_load()
-    local id = "diegetic_audio_control"
+    local id = "ad"
     return {
         id = id,
         sh = true,
         gr = {
-            {id = "title", type = "slide", link = "dac_mcm_banner",
-             text = "ui_mcm_diegetic_audio_title", size = {512, 50}, spacing = 20},
+            {id = "title", type = "slide", link = "ad_mcm_banner",
+             text = "ui_mcm_ad_title", size = {512, 50}, spacing = 20},
 
             {id = "divider_master", type = "line"},
             {id = "desc_master", type = "desc",
-             text = "ui_mcm_diegetic_audio_desc_master", clr = {255, 200, 200, 100}},
+             text = "ui_mcm_ad_desc_master", clr = {255, 200, 200, 100}},
             {id = "master_volume", type = "track",
              val = 2, min = 0.1, max = 3.0, step = 0.1, def = 1.0},
 
             {id = "divider_radio", type = "line"},
             {id = "desc_radio", type = "desc",
-             text = "ui_mcm_diegetic_audio_desc_radio", clr = {255, 100, 200, 255}},
+             text = "ui_mcm_ad_desc_radio", clr = {255, 100, 200, 255}},
             {id = "radio_enabled", type = "check", val = 1, def = true},
             {id = "radio_volume", type = "track",
              val = 2, min = 0.1, max = 5.0, step = 0.1, def = 1.0},
@@ -46,7 +46,7 @@ function on_mcm_load()
 
             {id = "divider_megaphone", type = "line"},
             {id = "desc_megaphone", type = "desc",
-             text = "ui_mcm_diegetic_audio_desc_megaphone", clr = {255, 100, 200, 255}},
+             text = "ui_mcm_ad_desc_megaphone", clr = {255, 100, 200, 255}},
             {id = "megaphone_enabled", type = "check", val = 1, def = true},
             {id = "megaphone_volume", type = "track",
              val = 2, min = 0.1, max = 5.0, step = 0.1, def = 1.0},
@@ -55,36 +55,36 @@ function on_mcm_load()
 
             {id = "divider_guitar", type = "line"},
             {id = "desc_guitar", type = "desc",
-             text = "ui_mcm_diegetic_audio_desc_guitar", clr = {255, 100, 200, 255}},
+             text = "ui_mcm_ad_desc_guitar", clr = {255, 100, 200, 255}},
             {id = "guitar_enabled", type = "check", val = 1, def = true},
             {id = "guitar_volume", type = "track",
              val = 2, min = 0.1, max = 3.0, step = 0.1, def = 1.0},
 
             {id = "divider_harmonica", type = "line"},
             {id = "desc_harmonica", type = "desc",
-             text = "ui_mcm_diegetic_audio_desc_harmonica", clr = {255, 100, 200, 255}},
+             text = "ui_mcm_ad_desc_harmonica", clr = {255, 100, 200, 255}},
             {id = "harmonica_enabled", type = "check", val = 1, def = true},
             {id = "harmonica_volume", type = "track",
              val = 2, min = 0.1, max = 3.0, step = 0.1, def = 1.0},
 
             {id = "divider_debug", type = "line"},
             {id = "desc_debug", type = "desc",
-             text = "ui_mcm_diegetic_audio_desc_debug", clr = {255, 200, 100, 100}},
+             text = "ui_mcm_ad_desc_debug", clr = {255, 200, 100, 100}},
             {id = "debug_mode", type = "check", val = 1, def = false},
 
             {id = "divider_footer", type = "line"},
             {id = "footer", type = "desc",
-             text = "ui_mcm_diegetic_audio_footer", clr = {255, 150, 150, 150}},
+             text = "ui_mcm_ad_footer", clr = {255, 150, 150, 150}},
             {id = "div_version", type = "line"},
-            {id = "version", type = "desc", text = "ui_mcm_diegetic_audio_title",
-                ui_hook_functor = { diegetic_audio_control_mcm.set_version_text },
+            {id = "version", type = "desc", text = "ui_mcm_ad_title",
+                ui_hook_functor = { ad_mcm.set_version_text },
                 clr = {255, 212, 201, 168}},
         }
     }
 end
 
 function set_version_text(_anchor, handlers)
-    handlers.desc:SetText(_diegetic_audio_control_deps.get_version())
+    handlers.desc:SetText(_ad_deps.get_version())
 end
 
 function on_game_start()
