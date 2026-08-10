@@ -1,5 +1,5 @@
 AlifeDiegetic: In-world volume control for STALKER Anomaly, by Damian
-Version: 1.0.9 (xlibs 1.8.4, demonized 20250908)
+Version: next (xlibs 1.8.4, demonized 20250908)
 GitHub: https://github.com/damiansirbu-stalker/AlifeDiegetic
 Changelog: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/changelog
 Russian / На русском: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/readme_ru.txt

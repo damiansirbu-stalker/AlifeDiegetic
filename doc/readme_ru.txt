@@ -1,5 +1,5 @@
 AlifeDiegetic: Управление внутриигровым звуком для STALKER Anomaly, автор Damian
-Версия: 1.0.9 (xlibs 1.8.4, demonized 20250908)
+Версия: next (xlibs 1.8.4, demonized 20250908)
 GitHub: https://github.com/damiansirbu-stalker/AlifeDiegetic
 Список изменений: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/changelog
 English: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/readme.txt
