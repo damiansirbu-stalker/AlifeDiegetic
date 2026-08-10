@@ -10,60 +10,60 @@
     <string id="ui_mcm_ad_desc_master">
         <text>Глобальный множитель, применяемый ко всему звуку ниже</text>
     </string>
-    <string id="ui_mcm_ad_control_master_volume">
+    <string id="ui_mcm_ad_master_volume">
         <text>Общая громкость (по умолчанию: 1.0 = без изменений)</text>
     </string>
 
     <string id="ui_mcm_ad_desc_radio">
         <text>Радио и музыка на базах фракций</text>
     </string>
-    <string id="ui_mcm_ad_control_radio_enabled">
+    <string id="ui_mcm_ad_radio_enabled">
         <text>Включить радио</text>
     </string>
-    <string id="ui_mcm_ad_control_radio_volume">
+    <string id="ui_mcm_ad_radio_volume">
         <text>Громкость радио (по умолчанию: 1.0)</text>
     </string>
-    <string id="ui_mcm_ad_control_radio_frequency">
+    <string id="ui_mcm_ad_radio_frequency">
         <text>Пауза между треками (по умолчанию: 1.0) -- больше = длиннее тишина</text>
     </string>
 
     <string id="ui_mcm_ad_desc_megaphone">
         <text>Пропаганда Долга, объявления Арены, сирены</text>
     </string>
-    <string id="ui_mcm_ad_control_megaphone_enabled">
+    <string id="ui_mcm_ad_megaphone_enabled">
         <text>Включить мегафоны</text>
     </string>
-    <string id="ui_mcm_ad_control_megaphone_volume">
+    <string id="ui_mcm_ad_megaphone_volume">
         <text>Громкость мегафонов (по умолчанию: 1.0)</text>
     </string>
-    <string id="ui_mcm_ad_control_megaphone_frequency">
+    <string id="ui_mcm_ad_megaphone_frequency">
         <text>Пауза между объявлениями (по умолчанию: 1.0) -- больше = длиннее тишина</text>
     </string>
 
     <string id="ui_mcm_ad_desc_guitar">
         <text>Гитара у костра (требуется мод Guitar Animation)</text>
     </string>
-    <string id="ui_mcm_ad_control_guitar_enabled">
+    <string id="ui_mcm_ad_guitar_enabled">
         <text>Включить гитару</text>
     </string>
-    <string id="ui_mcm_ad_control_guitar_volume">
+    <string id="ui_mcm_ad_guitar_volume">
         <text>Громкость гитары (по умолчанию: 1.0)</text>
     </string>
 
     <string id="ui_mcm_ad_desc_harmonica">
         <text>Губная гармошка (требуется мод Harmonica)</text>
     </string>
-    <string id="ui_mcm_ad_control_harmonica_enabled">
+    <string id="ui_mcm_ad_harmonica_enabled">
         <text>Включить гармошку</text>
     </string>
-    <string id="ui_mcm_ad_control_harmonica_volume">
+    <string id="ui_mcm_ad_harmonica_volume">
         <text>Громкость гармошки (по умолчанию: 1.0)</text>
     </string>
 
     <string id="ui_mcm_ad_desc_debug">
         <text>Логирование в консоль для устранения неполадок</text>
     </string>
-    <string id="ui_mcm_ad_control_debug_mode">
+    <string id="ui_mcm_ad_debug_mode">
         <text>Режим отладки</text>
     </string>
 

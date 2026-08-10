@@ -77,14 +77,10 @@ function on_mcm_load()
              text = "ui_mcm_ad_footer", clr = {255, 150, 150, 150}},
             {id = "div_version", type = "line"},
             {id = "version", type = "desc", text = "ui_mcm_ad_title",
-                ui_hook_functor = { ad_mcm.set_version_text },
+                ui_hook_functor = { _ad_deps.platform_functor() },
                 clr = {255, 212, 201, 168}},
         }
     }
-end
-
-function set_version_text(_anchor, handlers)
-    handlers.desc:SetText(_ad_deps.get_version())
 end
 
 function on_game_start()
