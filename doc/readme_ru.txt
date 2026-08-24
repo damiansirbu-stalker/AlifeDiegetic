@@ -5,6 +5,20 @@ GitHub: https://github.com/damiansirbu-stalker/AlifeDiegetic
 English: https://github.com/damiansirbu-stalker/AlifeDiegetic/blob/main/doc/readme.txt
 Баги, предложения: https://github.com/damiansirbu-stalker/AlifeDiegetic/issues
 
+Alife Collection:
+AlifeAmbience: https://github.com/damiansirbu-stalker/AlifeAmbience
+AlifeBalance: https://www.moddb.com/mods/stalker-anomaly/addons/alifebalance
+AlifeCompanions: https://github.com/damiansirbu-stalker/AlifeCompanions
+AlifeDiegetic: https://www.moddb.com/mods/stalker-anomaly/addons/diegetic-audio-control-100
+AlifeGuard: https://www.moddb.com/mods/stalker-anomaly/addons/alifeguard-1001
+AlifePlus: https://www.moddb.com/mods/stalker-anomaly/addons/alifeplus-v1-0-01
+AlifeSpooks: https://github.com/damiansirbu-stalker/AlifeSpooks
+AlifeTactics: https://www.moddb.com/mods/stalker-anomaly/addons/alifetactics
+FurnitureFuel: https://github.com/damiansirbu-stalker/FurnitureFuel
+JitProfiler: https://github.com/damiansirbu-stalker/JitProfiler
+TestZone: https://github.com/damiansirbu-stalker/TestZone
+xlibs: https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001
+
 В Anomaly нет способа регулировать громкость радио, мегафонов, гитар и губных гармошек независимо от общих ползунков звука. Нельзя приглушить пропаганду Долга, не убив при этом эмбиент. AlifeDiegetic решает эту проблему.
 
 Мод подключается напрямую к аудиоподсистемам, воспроизводящим внутриигровой звук: ph_sound для радио и мегафонов, guitar_anim для гитары у костра, harmonica_anim для губной гармошки. Каждый источник получает свой ползунок громкости, переключатель включения/выключения и, где применимо, множитель паузы, управляющий тишиной между треками или объявлениями.
