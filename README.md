@@ -1,4 +1,4 @@
-# AlifeDiegetic: in-world volume control for STALKER Anomaly
+# AlifeDiegetic: In-world volume control for STALKER Anomaly
 
 A volume-control layer for in-world audio sources: radios, megaphones, guitars and harmonicas, each hooked into the subsystem that plays it.
 Every source has its own volume and toggle, with a master on top, and changes apply live through MCM.
