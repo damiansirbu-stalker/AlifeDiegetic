@@ -144,9 +144,10 @@ end
 
 --- Wrap ph_sound.snd_source.update and replace the instrument play functions
 local function install_hooks()
-    if ph_sound and ph_sound.snd_source and ph_sound.snd_source.update then
-        orig_snd_update = ph_sound.snd_source.update
-        ph_sound.snd_source.update = hooked_snd_update
+    local snd_source = ph_sound and ph_sound.snd_source
+    if snd_source and snd_source.update then
+        orig_snd_update = snd_source.update
+        snd_source.update = hooked_snd_update
         if snap.debug then log.debug("hooked ph_sound.snd_source.update (radio/megaphone)") end
     else
         log.warn("ph_sound absent - radio/megaphone control off")
