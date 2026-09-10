@@ -11,21 +11,24 @@ local DEMONIZED_MIN_VERSION = 20250908
 local DEMONIZED_URL = "https://github.com/themrdemonized/xray-monolith"
 local AOENGINE_URL  = "https://github.com/Mirrowel/AOEngine-Assets"
 
---- @return string Version string
-function get_version()
-    return _VERSION
-end
-
 -- Build this release is tested against, raised every release (stalker-compatibility.md).
 local TARGET_DEMONIZED = 20260722
+
+-- AOE is judged as an engine frozen at this build (stalker-compatibility.md).
+local AOE_BASELINE_BUILD = 20250908
+
+-- Colors build lazily: GetARGB is nil under the static validator.
+local _footer_clr = nil
 
 -- xray-monolith build (YYYYMMDD) as the themrdemonized tag style, no zero padding (20260722 -> "2026.7.22").
 local function _build_tag(build)
     return math_floor(build / 10000) .. "." .. (math_floor(build / 100) % 100) .. "." .. (build % 100)
 end
 
--- AOE is judged as an engine frozen at this build (stalker-compatibility.md).
-local AOE_BASELINE_BUILD = 20250908
+--- @return string Version string
+function get_version()
+    return _VERSION
+end
 
 -- Platform status line and verdict for the boot log and the MCM footer.
 function platform_status()
@@ -50,9 +53,7 @@ function platform_status()
     return line .. " (fully compatible)", "full"
 end
 
--- MCM ui_hook_functor for the footer row: writes platform_status into the desc widget, colored by
--- verdict. Colors build lazily (GetARGB is absent under the static validator).
-local _footer_clr = nil
+-- MCM footer ui_hook_functor: writes the colored platform_status into the desc widget.
 function platform_functor()
     return function(_anchor, handlers)
         if not _footer_clr then
@@ -110,8 +111,6 @@ function on_game_start()
         )
     end
 
-    -- The boot platform line and the MCM footer come from the same builder, so they never drift.
-    -- printf lands it in xray_*.log (the log reporters attach); xlog mirrors it to <mod>.log.
     local platform_line = (platform_status())
     printf("~ [%s] %s", MOD_NAME, platform_line)
     xlog.get_logger(MOD_NAME, { outfile = MOD_NAME:lower() .. ".log" })

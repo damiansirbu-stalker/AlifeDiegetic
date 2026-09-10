@@ -5,6 +5,9 @@ local sound_object, RegisterScriptCallback = sound_object, RegisterScriptCallbac
 
 local log = xlog.get_logger("AD", { outfile = "alifediegetic.log" })
 
+local CAT_RADIO = "radio"
+local CAT_MEGAPHONE = "megaphone"
+
 local snap = {
     master = 1.0, debug = false,
     radio_on = true, radio_vol = 1.0, radio_freq = 1.0,
@@ -13,8 +16,8 @@ local snap = {
     harmonica_on = true, harmonica_vol = 1.0,
 }
 
---- Refresh the config snapshot from MCM
-local function refresh()
+--- Update the config snapshot from MCM.
+local function update_snapshot()
     local getter = ad_mcm and ad_mcm.get_config
     local function get(key, default)
         local v = getter and getter(key)
@@ -35,7 +38,7 @@ local function refresh()
     snap.harmonica_vol = get("harmonica_volume", 1.0)
 end
 
---- True when the theme is a radio emitter
+--- True when the theme is a radio emitter.
 local function is_radio(theme)
     return theme:find("radio") or theme:find("sidor") or theme:find("forester") or theme:find("bar_")
         or theme:find("stalker_base") or theme:find("yantar") or theme:find("monolith")
@@ -43,26 +46,26 @@ local function is_radio(theme)
         or theme:find("clear_sky") or theme:find("bandit")
 end
 
---- True when the theme is a megaphone emitter
+--- True when the theme is a megaphone emitter.
 local function is_megaphone(theme)
     return theme:find("megafon") or theme:find("megaphone") or theme:find("rupor")
         or theme:find("arena_") or theme:find("propaganda") or theme:find("alarm") or theme:find("announce")
 end
 
---- Classify a ph_sound emitter by theme: radio / megaphone / other
-local function classify(theme_name)
+--- Classify a ph_sound emitter by theme: radio / megaphone / other.
+local function get_theme_category(theme_name)
     if not theme_name then return "other" end
     local theme = theme_name:lower()
-    if is_radio(theme) then return "radio" end
-    if is_megaphone(theme) then return "megaphone" end
+    if is_radio(theme) then return CAT_RADIO end
+    if is_megaphone(theme) then return CAT_MEGAPHONE end
     return "other"
 end
 
---- (volume mult, frequency mult) for a category; disabled = 0 volume
-local function settings_for(cat)
-    if cat == "radio" then
+--- (volume mult, frequency mult) for a category; disabled = 0 volume.
+local function get_settings(cat)
+    if cat == CAT_RADIO then
         return (snap.radio_on and snap.master * snap.radio_vol or 0), snap.radio_freq
-    elseif cat == "megaphone" then
+    elseif cat == CAT_MEGAPHONE then
         return (snap.mega_on and snap.master * snap.mega_vol or 0), snap.mega_freq
     end
     return snap.master, 1.0
@@ -70,16 +73,16 @@ end
 
 local orig_snd_update = nil
 
---- Wrap ph_sound.snd_source.update: apply frequency, then set volume from the condlist base
-local function hooked_snd_update(self, delta)
+--- Wrap ph_sound.snd_source.update: apply frequency, then set volume from the condlist base.
+local function update_snd_source(self, delta)
     local st = self.st
     local cat = st._ad_cat
     if cat == nil then
-        cat = classify(st.theme)
+        cat = get_theme_category(st.theme)
         st._ad_cat = cat
         if snap.debug then log.debug("source theme=%s cat=%s", tostring(st.theme), cat) end
     end
-    local vol_mult, freq_mult = settings_for(cat)
+    local vol_mult, freq_mult = get_settings(cat)
 
     if freq_mult ~= 1.0 or st._ad_pmin ~= nil then
         if st._ad_pmin == nil then
@@ -99,9 +102,7 @@ local function hooked_snd_update(self, delta)
             if picked and picked ~= "" then base = tonumber(picked) or 1.0 end
         end
         self.played_sound.volume = base * vol_mult
-        if snap.debug then
-            log.debug("%s '%s' base=%.2f mult=%.2f -> %.2f", cat, tostring(st.theme), base, vol_mult, base * vol_mult)
-        end
+        if snap.debug then log.debug("%s '%s' base=%.2f mult=%.2f -> %.2f", cat, tostring(st.theme), base, vol_mult, base * vol_mult) end
     end
 end
 
@@ -118,7 +119,7 @@ local INSTR = {
     },
 }
 
---- Play one instrument at the configured volume, or restore when disabled
+--- Play one instrument at the configured volume, or restore when disabled.
 local function play_instrument(name)
     local instr = INSTR[name]
     local mod = instr.mod
@@ -142,12 +143,12 @@ local function play_instrument(name)
     end)
 end
 
---- Wrap ph_sound.snd_source.update and replace the instrument play functions
-local function install_hooks()
+--- Wrap ph_sound.snd_source.update and replace the instrument play functions.
+local function apply_hooks()
     local snd_source = ph_sound and ph_sound.snd_source
     if snd_source and snd_source.update then
         orig_snd_update = snd_source.update
-        snd_source.update = hooked_snd_update
+        snd_source.update = update_snd_source
         if snap.debug then log.debug("hooked ph_sound.snd_source.update (radio/megaphone)") end
     else
         log.warn("ph_sound absent - radio/megaphone control off")
@@ -164,10 +165,10 @@ local function install_hooks()
 end
 
 function on_game_start()
-    refresh()
+    update_snapshot()
     log.info("AlifeDiegetic v%s (xlibs v%s)", _ad_deps.get_version(), xlibs.get_version())
-    install_hooks()
-    RegisterScriptCallback("actor_on_first_update",      refresh)
-    RegisterScriptCallback("on_option_change",           refresh)
-    RegisterScriptCallback("mcm_option_restore_default", refresh)
+    apply_hooks()
+    RegisterScriptCallback("actor_on_first_update",      update_snapshot)
+    RegisterScriptCallback("on_option_change",           update_snapshot)
+    RegisterScriptCallback("mcm_option_restore_default", update_snapshot)
 end

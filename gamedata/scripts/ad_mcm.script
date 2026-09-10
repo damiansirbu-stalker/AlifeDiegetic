@@ -17,8 +17,8 @@ defaults = {
     debug_mode = false,
 }
 
-local path_builder = function(key) return "ad/" .. key end
-cfg, get_config, load_config = xmcm.create_config("ad", defaults, path_builder)
+local build_path = function(key) return "ad/" .. key end
+cfg, get_config, load_config = xmcm.create_config("ad", defaults, build_path)
 
 function on_mcm_load()
     local id = "ad"
