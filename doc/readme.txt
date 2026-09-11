@@ -51,6 +51,7 @@ Master volume multiplier applied to all sources
 
 Requirements:
 Anomaly 1.5.3
+Modded exes: themrdemonized 2025.9.10 or newer, or AOEngine v0.55 or newer. The full feature set needs the latest demonized build; a feature that needs a newer one stays inactive on older exes.
 xlibs (https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001)
 MCM
 Radio_Remastered or similar (for radio/megaphone control)
@@ -73,20 +74,14 @@ Performance:
 Performance comes first, ahead of any feature. When a feature cannot fit the budget it is reworked, replaced, or removed with an X-Ray engine modification rather than allowed to slow the game. Measured on the engine built from the latest source with no multithreading and no optimizations, so the timings are worst-case; the optimized multithreaded build you run is always faster.
 
 Compatibility:
-Requires xlibs.
-Runs on themrdemonized modded exes 2025.9.10 or newer, or AOEngine v0.55 or newer.
-The full feature set needs the latest demonized build. A feature that needs a newer build stays inactive on older exes.
-Tested with GAMMA. Hooks into ph_sound, guitar_anim, and harmonica_anim. If those mods are not present the relevant controls are inactive. No base script modifications.
+Coexists with the mods it controls. It hooks ph_sound, guitar_anim, and harmonica_anim, and a control is inactive when its mod is absent.
+Tested with Anomaly 1.5.3, GAMMA, and Forgotten Zone.
 
 Development:
 Written against X-Ray Monolith engine source, Demonized exes source code, and Anomaly 1.5.3 unpacked gamedata.
-Code patterns and engine usage validated against established work by reputable GAMMA modders (Demonized, Vintar0, RavenAscendant, xcvb).
+Code patterns and engine usage validated against established work by reputable Anomaly modders (Demonized, Vintar0, RavenAscendant, xcvb).
 The code is validated in real time by a multi-stage pipeline: luacheck, selene, tree-sitter AST analysis, contract rules, cross-file dependency resolution, cyclomatic complexity analysis, crash and vulnerability pattern detection, lua54 integration testing with X-Ray engine stubs, gitleaks secret scanning.
 Full report in doc/test-report.log.
-
-FAQ:
-Do I need modded exes?
-  Yes. AlifeDiegetic needs themrdemonized modded exes (2025.9.10 or newer) or AOEngine (v0.55 or newer). Vanilla Anomaly does not expose the APIs it relies on.
 
 Credits:
 Altogolik - support, ideas, source materials
@@ -98,7 +93,7 @@ Usage and License:
   Full license in LICENSE file and on GitHub.
 
 Reporting issues and suggestions
-Open a report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose, or ask on the GAMMA, EFP, Anomaly, and Zona Discord servers. Read this readme and the MCM options first.
+Open a report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose, or ask on the EFP, Anomaly, and Zona Discord servers. Read this readme and the MCM options first.
 
 Include: exact repro steps (new game or named save, expected vs actual), engine build, modlist, load order, xray.log, and the mod debug log. With hundreds of mods loaded, only the log shows whether this one was involved.
 
