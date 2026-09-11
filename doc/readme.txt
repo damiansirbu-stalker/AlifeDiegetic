@@ -70,12 +70,12 @@ Disable or remove in MO2.
 Configuration:
 All settings in MCM under AlifeDiegetic. All defaults are 1.0 (unchanged from game behavior).
 
-Performance:
-Performance comes first, ahead of any feature. When a feature cannot fit the budget it is reworked, replaced, or removed with an X-Ray engine modification rather than allowed to slow the game. Measured on the engine built from the latest source with no multithreading and no optimizations, so the timings are worst-case; the optimized multithreaded build you run is always faster.
-
 Compatibility:
 Coexists with the mods it controls. It hooks ph_sound, guitar_anim, and harmonica_anim, and a control is inactive when its mod is absent.
 Tested with Anomaly 1.5.3, GAMMA, and Forgotten Zone.
+
+Performance:
+Performance comes first, ahead of any feature. When a feature cannot fit the budget it is reworked, replaced, or removed with an X-Ray engine modification rather than allowed to slow the game. Measured on the engine built from the latest source with no multithreading and no optimizations, so the timings are worst-case; the optimized multithreaded build you run is always faster.
 
 Development:
 Written against X-Ray Monolith engine source, Demonized exes source code, and Anomaly 1.5.3 unpacked gamedata.
@@ -92,9 +92,6 @@ Usage and License:
   Reproducing the implementation in other software: not allowed, even with credit.
   Full license in LICENSE file and on GitHub.
 
-Reporting issues and suggestions
-Open a report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose, or ask on the EFP, Anomaly, and Zona Discord servers. Read this readme and the MCM options first.
-
-Include: exact repro steps (new game or named save, expected vs actual), engine build, modlist, load order, xray.log, and the mod debug log. With hundreds of mods loaded, only the log shows whether this one was involved.
-
-The debug log is required, so set the MCM log level to DEBUG, reproduce, then set it back to WARN. DEBUG is not free: it writes a line for every event.
+Diagnostics and reporting:
+Debug mode: turn on in MCM, reproduce, then off. Writes alifediegetic.log.
+Report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose or the EFP, Anomaly, and Zona Discord. Include repro steps, engine build, modlist, load order, xray.log, and alifediegetic.log.
