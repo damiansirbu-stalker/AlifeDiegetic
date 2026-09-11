@@ -97,4 +97,4 @@ Open a report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new
 
 Include: exact repro steps (new game or named save, expected vs actual), engine build, modlist, load order, xray.log, and the mod debug log. With hundreds of mods loaded, only the log shows whether this one was involved.
 
-The debug log is required, so set the MCM log level to DEBUG, reproduce, then set it back to WARN. DEBUG is not free: it writes a line for every event and can hitch a single-threaded exe.
+The debug log is required, so set the MCM log level to DEBUG, reproduce, then set it back to WARN. DEBUG is not free: it writes a line for every event.
