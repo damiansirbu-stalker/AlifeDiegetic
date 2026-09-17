@@ -166,7 +166,7 @@ end
 
 function on_game_start()
     update_snapshot()
-    log.info("AlifeDiegetic v%s (xlibs v%s)", _ad_deps.get_version(), xlibs.get_version())
+    log.info("AlifeDiegetic v%s (xlibs v%s)", _ad_init.get_version(), xlibs.get_version())
     apply_hooks()
     RegisterScriptCallback("actor_on_first_update",      update_snapshot)
     RegisterScriptCallback("on_option_change",           update_snapshot)

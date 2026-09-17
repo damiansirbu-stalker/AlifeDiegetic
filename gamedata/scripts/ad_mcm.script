@@ -77,7 +77,7 @@ function on_mcm_load()
              text = "ui_mcm_ad_footer", clr = {255, 150, 150, 150}},
             {id = "div_version", type = "line"},
             {id = "version", type = "desc", text = "ui_mcm_ad_title",
-                ui_hook_functor = { _ad_deps.platform_functor() },
+                ui_hook_functor = { _ad_init.get_platform_functor() },
                 clr = {255, 212, 201, 168}},
         }
     }
