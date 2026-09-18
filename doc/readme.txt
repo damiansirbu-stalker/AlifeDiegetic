@@ -95,4 +95,4 @@ Usage and License:
 
 Diagnostics and reporting:
 Debug mode: turn on in MCM, reproduce, then off. Writes alifediegetic.log.
-Report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose or the EFP, Anomaly, and Zona Discord. Include repro steps, engine build, modlist, load order, xray.log, and alifediegetic.log.
+Report at https://github.com/damiansirbu-stalker/AlifeDiegetic/issues/new/choose or the EFP, Anomaly, and Zona Discord. Include repro steps, engine build, modlist, load order, xray.log, and the debug log.
