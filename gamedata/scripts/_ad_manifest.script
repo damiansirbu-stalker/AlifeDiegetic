@@ -2,6 +2,6 @@
 
 MANIFEST = {
     name    = "AlifeDiegetic",
-    version = "next",
+    version = "1.0.10-snapshot",
     xlibs   = "1.8.4",
 }

@@ -1,4 +1,4 @@
-next
+1.0.10-snapshot
   Summary: performance and infrastructure
 
   Performance and Infrastructure
@@ -12,7 +12,7 @@ next
   Fixed: radio and megaphone volume holds steady at the set level, and returning a frequency slider to default restores the original timing.
   Fixed: MCM volume-slider and toggle labels now display in both English and Russian.
   Compatibility:
-    Requires xlibs 1.8.4 and themrdemonized modded exes 2025.9.10+ or AOEngine v0.55+.
+    Requires xlibs 1.8.4 and themrdemonized modded exes 20250908+ or AOEngine v0.55+.
     Added: platform status in the MCM footer and boot log, matching the Alife family, showing the exact engine build and whether it is fully or partially compatible.
 
 1.0.8
