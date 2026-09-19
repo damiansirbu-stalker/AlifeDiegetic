@@ -5,7 +5,7 @@ Every source has its own volume and toggle, with a master on top, and changes ap
 
 [ModDB](https://www.moddb.com/mods/stalker-anomaly/addons/diegetic-audio-control-100) | [Releases](https://github.com/damiansirbu-stalker/AlifeDiegetic/releases) | [Bugs, suggestions](https://github.com/damiansirbu-stalker/AlifeDiegetic/issues)
 
-[![validate](https://github.com/damiansirbu-stalker/AlifeDiegetic/actions/workflows/validate.yml/badge.svg)](https://github.com/damiansirbu-stalker/AlifeDiegetic/actions/workflows/validate.yml) [![Project Health](https://img.shields.io/badge/project_health-dashboard-00ced1)](https://damiansirbu-stalker.github.io/AlifeDiegetic/)
+[![ci](https://github.com/damiansirbu-stalker/AlifeDiegetic/actions/workflows/ci.yml/badge.svg)](https://github.com/damiansirbu-stalker/AlifeDiegetic/actions/workflows/ci.yml) [![Project Health](https://img.shields.io/badge/project_health-dashboard-00ced1)](https://damiansirbu-stalker.github.io/AlifeDiegetic/)
 
 Requires: Anomaly 1.5.3, modded exes (themrdemonized or AOEngine), [xlibs](https://www.moddb.com/mods/stalker-anomaly/addons/xlibs-1001), MCM. Exact versions in [readme.txt](doc/readme.txt).
 
